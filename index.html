@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>24H-Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="myCSS/styling.css" />
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>24H-Weather⛅</h1>
+      <br />
+      <form id="search-bar">
+        <input type="text" placeholder="Search your city" id="city" />
+        <input type="submit" value="🔎" id="submit" />
+        <input type="submit" value="Current Location" id="current-Loc" />
+      </form>
+      <br />
+      <h2><strong>Welkom</strong></h2>
+      <a href="#" id="celcius">15</a>
+      <span id="unit">°C</span>
+      <ul>
+        <li id="date-time"></li>
+      </ul>
+      <br />
+      <div class="row">
+        <p>Hourly updates</p>
+        <div class="col">
+          16
+          <p>☁</p>
+          <p>15°</p>
+        </div>
+        <div class="col">
+          17
+          <p>☁</p>
+          <p>15°</p>
+        </div>
+        <div class="col">
+          18
+          <p>☁</p>
+          <p>15°</p>
+        </div>
+        <div class="col">
+          19
+          <p>☁</p>
+          <p>14°</p>
+        </div>
+        <div class="col">
+          20
+          <p>☁</p>
+          <p>14°</p>
+        </div>
+        <div class="col">
+          21
+          <p>☁</p>
+          <p>14°</p>
+        </div>
+        <div class="col">
+          22
+          <p>🌧</p>
+          <p>13°</p>
+        </div>
+        <div class="col">
+          23
+          <p>🌧</p>
+          <p>13°</p>
+        </div>
+        <div class="col">
+          00
+          <p>🌧</p>
+          <p>13°</p>
+        </div>
+        <div class="col">
+          01
+          <p>🌧</p>
+          <p>12°</p>
+        </div>
+        <div class="col">
+          02
+          <p>🌧</p>
+          <p>12°</p>
+        </div>
+        <div class="col">
+          03
+          <p>🌧</p>
+          <p>12°</p>
+        </div>
+      </div>
+      <br />
+      <div class="row">
+        <p>Next 7- days</p>
+        <div class="col">
+          Tomorrows
+          <br />
+          <br />
+          <p>Tuesday</p>
+          <p>Wednesday</p>
+          <p>Thursday</p>
+          <p>Friday</p>
+          <p>Saturday</p>
+          <p>Sunday</p>
+        </div>
+        <div class="col">
+          rainy - 🌧
+          <br />
+          <br />
+          <p>rainy - 🌧</p>
+          <p>rainy - 🌧</p>
+          <p>cloudy - ☁</p>
+          <p>cloudy - ☁</p>
+          <p>partially cloudy - ⛅</p>
+          <p>sunny - ☀</p>
+        </div>
+        <div class="col">
+          06° /12°
+          <br />
+          <br />
+          <p>06° /12°</p>
+          <p>06° /12°</p>
+          <p>10° /19°</p>
+          <p>10° /19°</p>
+          <p>10° /21°</p>
+          <p>13° /27°</p>
+        </div>
+      </div>
+      <br />
+
+      <form class="visability">
+        <div>
+          <label for="weather">Road visability</label>
+          <br />
+          <img src="images/foggy+road.jpg" alt="a foggy road" />
+          <p>
+            Description: The road ahaead is foggy. With 8km of visibility in
+            front. The estimated drive speed is 60km/h with caution.
+          </p>
+        </div>
+      </form>
+      <br />
+      <form class="extra">
+        <label for="prep">Additional Information</label>
+        <br />
+        Decsription: <span id="describe"></span>
+        <br />
+        Precipitation: <span id="precipitation"> </span>%
+        <br />
+        Type: <span id="weatherDescr"> </span>
+        <br />
+        Wind: <span id="wind-speed"> </span>km/h
+        <br />
+        Humidity: <span id="humidity"> </span>%
+      </form>
+      <br />
+      <input
+        class="form-control"
+        type="text"
+        value="Report any issues here..."
+        aria-label="Report any issues here"
+        readonly
+      />
+      <br />
+    </div>
+    <script src="functions/controls.js"></script>
+  </body>
+</html>
