@@ -22,11 +22,6 @@ h2 {
   margin-bottom: 0%;
 }
 
-#degre {
-  font-size: 40px;
-  margin-bottom: 0%;
-}
-
 #celcius {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 50px;
@@ -61,4 +56,10 @@ img {
 
 .visability {
   border-style: ridge;
+}
+
+#unit {
+  position: relative;
+  font-size: 14px;
+  top: -20px;
 }
