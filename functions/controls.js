@@ -25,8 +25,8 @@ todaysDate.innerHTML = presentDate(currentTime);
 
 function temps(event) {
   event.preventDefault();
-  let celcius = document.querySelector("#celcuis");
-  let fahrenheit = Math.round(15 * (9 / 5) + 32);
+  let celcius = document.querySelector("#tempo");
+  let fahrenheit = Math.round("#tempo * (9 / 5) + 32");
   celcius.innerHTML = `${fahrenheit}`;
 }
 let changeTemp = document.querySelector("#tempo");
