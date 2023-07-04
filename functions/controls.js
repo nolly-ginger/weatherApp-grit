@@ -25,18 +25,18 @@ todaysDate.innerHTML = presentDate(currentTime);
 
 function temps(event) {
   event.preventDefault();
-  let celcius = document.querySelector("#celcius");
+  let celcius = document.querySelector("#celcuis");
   let fahrenheit = Math.round(15 * (9 / 5) + 32);
   celcius.innerHTML = `${fahrenheit}`;
 }
-let changeTemp = document.querySelector("#celcius");
+let changeTemp = document.querySelector("#tempo");
 changeTemp.addEventListener("click", temps);
 
 function searchPlaceDetails(response) {
   let h2 = document.querySelector("h2");
   h2.innerHTML = response.data.name;
 
-  let temps = document.querySelector("#celcius");
+  let temps = document.querySelector("#tempo");
   temps.innerHTML = Math.round(response.data.main.temp);
 
   let precip = document.querySelector("#precipitation");
